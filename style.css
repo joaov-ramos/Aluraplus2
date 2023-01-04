@@ -1,0 +1,161 @@
+:root{
+	--branco-principal: #FFFFFF; /* define um nome para chamar uma cor*/
+	--cinza-secundario: #C0C0C0;
+	--botao-azul: #167BF7;
+	--cor-de-fundo: #00030C;
+	--fonte-principal: 'Inter';
+	--botao-azul-efeito:#3c92fa;
+}
+
+body{
+	background:var(--cor-de-fundo); /*o var puxa a cor que foi definida em cima*/
+	color: var(--branco-principal);
+	font-family: var(--fonte-principal);
+	font-size: 16px;
+	font-weight: 400;
+}
+
+*{  			/*Pega todos os elementos html e coloca os estilos que definir*/
+	margin: 0;
+	padding: 0;
+}
+
+.principal{
+	background-image: url("img/background.png"); /*Colocou a imagem aqui por ser so uma questao decorativa, se tiver outra função, coloca no html mesmo*/
+	background-repeat: no-repeat; /*Função que altera a repetiçaõ da imagem, antes ela estava repetindo ate o final da pagina, agora, nao repete mais*/
+	background-size: contain; /*O tamanho da imagem agora ocupa a tela toda, proporcionalmente ate a lateral da tela*/ 
+	align-items: center;
+	text-align: center;
+}
+
+.container{
+	height: 100vh; /*O vh ideintifica a altura da imagem como a tela toda, identificando pelo dispositivo, isso acontece pelo comando que colocamos no inicio do HTML*/
+	display: grid; /*Separa os elementos da tela de acordo com seu tamanho*/
+	grid-template-columns: 50% 50%; /*divide em colunas, nesse caso, de 50%*/
+}
+
+.container__botao{
+	background-color: var(--botao-azul);
+	border-radius: 5px;
+	padding: 1em; /*O "em" puxa o tamanho de acordo como tamanho da fonte, espelha o tamanho da fonte onde for colocado, ja o padding é a margem externa*/
+	color: var(--branco-principal);
+	display: block;
+	text-decoration: none;
+	margin-bottom: 1em; /*a margin é a margem externa à borda*/
+}
+
+.botao_secundario{
+	background-color: transparent;
+	border: 2px solid var(--branco-principal);
+}
+
+.container__aviso{
+	font-size: 12px;
+	color: var(--cinza-secundario);
+}
+
+.container__titulo{
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.container__imagem{
+	margin: 1em 0 2em 0; /*cima, direita, baixo, esquerda*/
+}
+
+.container__caixa{
+	margin: 0 6em; /*o 0 é em cima e em baixo, e o 6 sao os dois lados*/
+}
+
+.secundario__imagem{
+	width: 80%;
+}
+
+.secundario{
+	align-items: center;
+	margin: 0 10em;
+}
+
+.descricao__titulo{
+	font-weight: 700;
+	font-size: 48px;
+	color: var(--branco-principal);
+	margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+	color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+	display:inline-block;
+	margin-top: 1em;
+}
+
+.container__descricao{
+	padding: 2em;
+}
+
+.dispositivos__lista{
+	display: flex; /*Alinha os itens de uma lista, deixa um do lado do outro, poderia ter usado o grid tambem*/
+	justify-content: center;	
+	list-style-type: none; /*Tira o estilo da lista, nesse caso, foi para remover os pontinhos*/
+	margin: 5em 0;
+}
+
+.dispositivos{
+	text-align: center;
+}
+
+.dispositivos__titulo{
+	font-size: 48px;
+	color: var(--branco-principal);
+}
+
+.lista__item{
+	font-size:32px;
+	color: var(--branco-principal);
+}
+
+
+
+.rodape__lista{
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	margin-top: 1em;
+}
+
+.lista__link a{
+	color: var(--branco-principal);
+	text-decoration: none;
+	margin-left: 1em;
+}
+
+.rodape__texto{
+	margin: 1em 0;
+	color: var(--branco-principal);
+	font-size: 14px;
+}
+
+.rodape{
+	text-align: center;
+	margin: 5em 3em;
+}
+
+.rodape__logo{
+	margin-bottom: 2em;
+}
+
+.lista__link a:hover{ /*Troca a cor quando passa o mouse pr cima*/
+	color: var(--botao-azul);
+}
+
+.lista__link a:active{ /*Troca a cor quando clica*/
+	color: purple;
+}
+
+.container__botao:hover{
+	background-color: var(--botao-azul-efeito);
+	color: var(--cor-de-fundo);
+}
